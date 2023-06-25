@@ -1,0 +1,35 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Prysm",
+            "type": "shell",
+            "command": "F:/Node/prysm/prysm.sh beacon-chain --execution-endpoint=http://localhost:8551 --datadir=F:/Node/prysm --jwt-secret=F:/Node/prysm/jwt.hex --suggested-fee-recipient=0x3f39c5B139f3AdBf94eea553A7BC3E755a76adB7",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "shell": {
+                    "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+                    "args": ["-c"]
+                }
+           }
+        },
+{
+    "label": "Run Geth",
+    "type": "shell",
+    "command": "geth --syncmode full --http --http.api eth,net,engine,admin --authrpc.jwtsecret F:/Node/prysm/jwt.hex --datadir=F:/Node/geth",
+    "problemMatcher": [],
+    "group": "build",
+    "options": {
+        "shell": {
+            "executable": "C:\\Program Files\\Git\\bin\\bash.exe",
+            "args": ["-c"]
+        }
+    }
+}
+
+    ]
+}
